@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsuarioProyecto extends Migration
+class CreateObsProyecto extends Migration
 {
     /**
      * Run the migrations.
@@ -14,14 +14,14 @@ class CreateUsuarioProyecto extends Migration
     public function up()
     {
         //para identificar al usuario/docente lider del proyecto
-        Schema::create('usuario_proyecto', function(Blueprint $table){
+        Schema::create('obs_proyecto', function(Blueprint $table){
             $table->bigIncrements('id');
             $table->timestamps();
 
             $table->unsignedBigInteger('id_user');
             $table->unsignedBigInteger('id_proyecto');
             $table->string('observacion');
-            $table->foreign('id_user')->references('id')->on('user');
+            $table->foreign('id_user')->references('id')->on('users');
             $table->foreign('id_proyecto')->references('id')->on('proyecto');
         });
     }
@@ -33,6 +33,6 @@ class CreateUsuarioProyecto extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('usuario_proyecto');
+        Schema::dropIfExists('obs_proyecto');
     }
 }

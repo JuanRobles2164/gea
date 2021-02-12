@@ -19,16 +19,13 @@ class CreateProyecto extends Migration
             $table->bigIncrements('id');
             $table->string('nombre');
             $table->string('descripcion')->nullable();
-            $table->dateTime('fecha_inicial')->default(Carbon::now());
             $table->date('fecha_limite');
-
             $table->unsignedBigInteger('id_user');
-            $table->unsignedBigInteger('id_metodologia');
             $table->smallInteger('id_estado');
+            $table->dateTime('fecha_inicial')->default(Carbon::now());
             $table->timestamps();
 
             $table->foreign('id_user')->references('id')->on('users');
-            $table->foreign('id_metodologia')->references('id')->on('metodologia');
 
         });
     }

@@ -19,4 +19,10 @@ class EActivo extends AEnum{
         $items = self::$items;
         return $items[$index];
     }
+    public static function getItems(){
+        if(self::$items == null || empty(self::$items)){
+            self::setItems();
+        }    
+        return self::$items;
+    }
 }

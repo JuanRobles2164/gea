@@ -1,14 +1,16 @@
 <?php
 
-namespace App\Repositories\Category;
+namespace App\Repositories\GrupoTrabajo;
 
-use App\Models\Category;
+use App\Models\GrupoTrabajo;
 use App\Repositories\BaseRepository;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
 
-class CategoryRepository extends BaseRepository{
+class GrupoTrabajoRepository extends BaseRepository{
     private static $instance;
     private function __construct(){
-        
+
     }
     public static function GetInstance(){
         if(!self::$instance instanceof self){
@@ -18,6 +20,6 @@ class CategoryRepository extends BaseRepository{
     }
     public function getModel()
     {
-        return new Category();
+        return new GrupoTrabajo();
     }
 }

@@ -12,6 +12,14 @@ class FactoryRepo{
         'RolesRepository' => 'App\Repositories\Roles\RolesRepository',
         'RoutesRepository' => 'App\Repositories\Routes\RoutesRepository',
         'PermissionsRepository' => 'App\Repositories\Permissions\PermissionsRepository',
+        'ObservacionesRepository' => 'App\Repositories\Observaciones\ObservacionesRepository',
+        'ProyectoRepository' => 'App\Repositories\Proyectos\ProyectoRepository',
+        'FasesRepository' => 'App\Repositories\Fases\FasesRepository',
+        'GrupoTrabajoRepository' => 'App\Repositories\GrupoTrabajo\GrupoTrabajoRepository',
+        'GrupoUsuarioRepository' => 'App\Repositories\GrupoUsuario\GrupoUsuarioRepository',
+        'ObjetivosRepository' => 'App\Repositories\Objetivos\ObjetivosRepository',
+        '' => '',
+        //'' => '',
     ];
     private static $instance;
     private function __construct(){

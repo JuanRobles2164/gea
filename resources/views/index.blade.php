@@ -27,7 +27,7 @@
                     <td>{{$c->updated_at}}</td>
                     <td>{{$c->created_at}}</td>
                 </tr>
-            @endforeach 
+            @endforeach
         </tbody>
     </table>
     <br>

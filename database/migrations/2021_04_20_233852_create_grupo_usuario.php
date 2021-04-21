@@ -7,23 +7,21 @@ use Illuminate\Support\Facades\Schema;
 class CreateGrupoUsuario extends Migration
 {
     /**
-     * Integrantes de cada grupo en un proyecto
+     * Run the migrations.
      *
      * @return void
      */
     public function up()
     {
         Schema::create('grupo_usuario', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('id_user');
-            $table->unsignedBigInteger('id_grupo');
+            $table->id();
             $table->timestamps();
-            $table->dateTime('fecha_inicio');
-            $table->dateTime('fecha_fin')->nullable();
 
+            $table->unsignedBigInteger("id_usuario");
+            $table->unsignedBigInteger("id_grupo");
 
-            $table->foreign('id_user')->references('id')->on('users');
-            $table->foreign('id_grupo')->references('id')->on('grupo_trabajo');
+            $table->foreign("id_usuario")->references("id")->on("users");
+            $table->foreign("id_grupo")->references("id")->on("grupo_trabajo");
         });
     }
 

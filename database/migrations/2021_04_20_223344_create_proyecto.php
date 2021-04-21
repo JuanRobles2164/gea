@@ -1,6 +1,5 @@
 <?php
 
-use Carbon\Carbon;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -14,19 +13,19 @@ class CreateProyecto extends Migration
      */
     public function up()
     {
-
         Schema::create('proyecto', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nombre');
-            $table->string('descripcion')->nullable();
-            $table->date('fecha_limite');
-            $table->unsignedBigInteger('id_user');
-            $table->smallInteger('id_estado');
-            $table->dateTime('fecha_inicial')->default(Carbon::now());
             $table->timestamps();
 
-            $table->foreign('id_user')->references('id')->on('users');
+            $table->string("nombre");
+            $table->string("descripcion")->nullable();
+            $table->date("fecha_inicio");
+            $table->date("fecha_limite");
+            $table->boolean("est_activo")->default(true);
+            $table->boolean("est_borrado")->default(false);
+            $table->unsignedBigInteger("id_usuario");
 
+            $table->foreign("id_usuario")->references("id")->on("users");
         });
     }
 

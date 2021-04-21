@@ -14,15 +14,16 @@ class CreateGrupoTrabajo extends Migration
     public function up()
     {
         Schema::create('grupo_trabajo', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('nombre');
-            $table->string('descripcion')->nullable();
-            $table->tinyInteger('estado_activo');
-            $table->unsignedBigInteger('id_proyecto');
+            $table->id();
             $table->timestamps();
 
-            $table->foreign('id_proyecto')->references('id')->on('proyecto');
+            $table->string("nombre");
+            $table->string("descripcion")->nullable();
+            $table->boolean("est_activo")->default(true);
+            $table->boolean("est_borrado")->default(false);
+            $table->unsignedBigInteger("id_proyecto");
 
+            $table->foreign("id_proyecto")->references("id")->on("proyecto");
         });
     }
 

@@ -31,3 +31,6 @@ Route::post('/rutas/encapsulamiento/cambiar', "RoutesController@cambiarEncapsula
 
 
 Route::get('/roles_usuario', 'PermissionsController@index')->name('roles_usuario.index');
+
+Route::post('/updateCiclo', 'CiclosController@updateCiclo')->name('ciclos.update');
+Route::post('/createCiclo', 'CiclosController@createCiclo')->name('ciclos.create');

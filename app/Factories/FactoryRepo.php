@@ -18,7 +18,8 @@ class FactoryRepo{
         'GrupoTrabajoRepository' => 'App\Repositories\GrupoTrabajo\GrupoTrabajoRepository',
         'GrupoUsuarioRepository' => 'App\Repositories\GrupoUsuario\GrupoUsuarioRepository',
         'ObjetivosRepository' => 'App\Repositories\Objetivos\ObjetivosRepository',
-        '' => '',
+        'CiclosRepository' => 'App\Repositories\Ciclos\CiclosRepository',
+        '' => ''
         //'' => '',
     ];
     private static $instance;

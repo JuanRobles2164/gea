@@ -27,7 +27,8 @@ class CreateUsersTable extends Migration
                 $table->string('last_name');
                 $table->rememberToken();
                 $table->timestamps();
-                $table->boolean('is_active')->default(true);
+                $table->boolean('est_activo')->default(true);
+                $table->boolean('est_borrado')->default(false);
             });
             DB::table('users')
             ->insert([
@@ -40,7 +41,8 @@ class CreateUsersTable extends Migration
                 'last_name' => 'Robles',
                 'created_at' => '2020-10-23 00:09:20',
                 'updated_at' => '2020-10-23 00:09:20',
-                'is_active' => true,
+                'est_activo' => true,
+                'est_borrado' => false
             ]);
         }
     }

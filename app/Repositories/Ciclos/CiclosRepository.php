@@ -3,7 +3,7 @@
 namespace App\Repositories\Ciclos;
 
 use App\Repositories\BaseRepository;
-use AppApp\Models\Ciclo;
+use App\Models\Ciclo;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 

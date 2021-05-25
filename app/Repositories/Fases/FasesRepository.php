@@ -2,7 +2,7 @@
 
 namespace App\Repositories\Fases;
 
-use App\Fase;
+use App\Models\Fase;
 use App\Repositories\BaseRepository;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;

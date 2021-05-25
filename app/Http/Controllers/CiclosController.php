@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Enums\EHttpStatus;
 use App\Factories\FactoryRepo;
 use App\Http\Requests\CiclosCreate;
-use AppApp\Models\Ciclo;
+use App\Models\Ciclo;
 use Illuminate\Http\Request;
 
 class CiclosController extends Controller
@@ -37,11 +37,11 @@ class CiclosController extends Controller
     }
     public function updateCiclo(CiclosCreate $request){
         $ciclo = new Ciclo;
-        $this.FactoryRepo::GetRepoInstance('CiclosRepository')->update($ciclo, $request);
+        $this->FactoryRepo::GetRepoInstance('CiclosRepository')->update($ciclo, $request);
         return $this->res;
     }
     public function deleteCiclo(CiclosCreate $request){
-        $this.FactoryRepo::GetRepoInstance('CiclosRepository')->delete($request);
+        $this->FactoryRepo::GetRepoInstance('CiclosRepository')->delete($request);
         return $this->res;
     }
 

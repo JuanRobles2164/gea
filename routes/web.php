@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'CategoryController@index')->name('index');
+//Route::get('/', 'CiclosController@index')->name('index');
 
 
 Auth::routes();
@@ -32,5 +32,6 @@ Route::post('/rutas/encapsulamiento/cambiar', "RoutesController@cambiarEncapsula
 
 Route::get('/roles_usuario', 'PermissionsController@index')->name('roles_usuario.index');
 
+Route::get('/ciclos', 'CiclosController@getAllCiclos')->name('ciclos.index');
 Route::post('/updateCiclo', 'CiclosController@updateCiclo')->name('ciclos.update');
 Route::post('/createCiclo', 'CiclosController@createCiclo')->name('ciclos.create');

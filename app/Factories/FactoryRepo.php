@@ -6,18 +6,18 @@ use Exception;
 
 class FactoryRepo{
     private static $repos = [
-        'CategoryRepository' => 'App\Repositories\Category\CategoryRepository',
+        //'CategoryRepository' => 'App\Repositories\Category\CategoryRepository',
         'UserAuthRepository' => 'App\Repositories\User\UserAuthRepository',
         'UserRepository' => 'App\Repositories\User\UserRepository',
         'RolesRepository' => 'App\Repositories\Roles\RolesRepository',
         'RoutesRepository' => 'App\Repositories\Routes\RoutesRepository',
         'PermissionsRepository' => 'App\Repositories\Permissions\PermissionsRepository',
-        'ObservacionesRepository' => 'App\Repositories\Observaciones\ObservacionesRepository',
-        'ProyectoRepository' => 'App\Repositories\Proyectos\ProyectoRepository',
-        'FasesRepository' => 'App\Repositories\Fases\FasesRepository',
-        'GrupoTrabajoRepository' => 'App\Repositories\GrupoTrabajo\GrupoTrabajoRepository',
-        'GrupoUsuarioRepository' => 'App\Repositories\GrupoUsuario\GrupoUsuarioRepository',
-        'ObjetivosRepository' => 'App\Repositories\Objetivos\ObjetivosRepository',
+        //'ObservacionesRepository' => 'App\Repositories\Observaciones\ObservacionesRepository',
+       // 'ProyectoRepository' => 'App\Repositories\Proyectos\ProyectoRepository',
+        //'FasesRepository' => 'App\Repositories\Fases\FasesRepository',
+        //'GrupoTrabajoRepository' => 'App\Repositories\GrupoTrabajo\GrupoTrabajoRepository',
+        //'GrupoUsuarioRepository' => 'App\Repositories\GrupoUsuario\GrupoUsuarioRepository',
+        //'ObjetivosRepository' => 'App\Repositories\Objetivos\ObjetivosRepository',
         'CiclosRepository' => 'App\Repositories\Ciclos\CiclosRepository',
         '' => ''
         //'' => '',
@@ -38,7 +38,7 @@ class FactoryRepo{
             $RepoInstance = $factory::GetInstance();
             return $RepoInstance;
         }catch(Exception $e){
-            return false;
+             return ;
         }
     }
     //obtiene la instancia de todos los repositorios
@@ -51,7 +51,7 @@ class FactoryRepo{
             }
             return $arr;
         }catch(Exception $e){
-            return false;
+            return ;
         }
     }
 }

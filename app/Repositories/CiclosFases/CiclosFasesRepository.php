@@ -1,15 +1,11 @@
 <?php
 
-namespace App\Repositories\Observaciones;
+namespace App\Repositories\CiclosFases;
 
-use App\Models\Observacion;
-use App\Models\Rol;
-use App\Models\Roles;
 use App\Repositories\BaseRepository;
-use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\DB;
+use App\Models\CicloFase;
 
-class ObservacionesRepository extends BaseRepository{
+class CiclosFasesRepository extends BaseRepository{
     private static $instance;
     private function __construct(){
 
@@ -22,6 +18,6 @@ class ObservacionesRepository extends BaseRepository{
     }
     public function getModel()
     {
-        return new Observacion();
+        return new CicloFase();
     }
 }

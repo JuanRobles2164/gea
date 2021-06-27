@@ -26,7 +26,7 @@ class RoutesController extends Controller
         //$ruta = new Ruta();
         $data = $request->all();
         $this->factoryRepo::getRepoInstance('RoutesRepository')->updateEncapsulamiento($data);
-        return response()->json($this->res);
+        return response()->json($request);
     }
 
 }

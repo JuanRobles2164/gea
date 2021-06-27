@@ -79,6 +79,7 @@
                     encapsulamiento: e.value,
                 },
                 success: function(r){
+                    console.log("funciona");
                     console.log(r);
                 }
             });

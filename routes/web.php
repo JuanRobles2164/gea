@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MainController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,6 +32,7 @@ Route::post('/rutas/encapsulamiento/cambiar', "RoutesController@cambiarEncapsula
 
 
 Route::get('/roles_usuario', 'PermissionsController@index')->name('roles_usuario.index');
+Route::post('/roles_usuario/crear', 'PermissionsController@crear')->name('roles_usuario.crear');
 
 Route::get('/ciclos', 'CiclosController@getAllCiclos')->name('ciclos.index');
 Route::post('/updateCiclo', 'CiclosController@updateCiclo')->name('ciclos.update');

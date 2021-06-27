@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Repositories\Objetivos;
+namespace App\Repositories\Disciplinas;
 
-use App\Models\Objetivo;
 use App\Repositories\BaseRepository;
-use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\DB;
+use App\Models\Disciplina;
 
-class ObjetivosRepository extends BaseRepository{
+class DisciplinasRepository extends BaseRepository{
     private static $instance;
     private function __construct(){
 
@@ -20,6 +18,6 @@ class ObjetivosRepository extends BaseRepository{
     }
     public function getModel()
     {
-        return new Objetivo();
+        return new Disciplina();
     }
 }

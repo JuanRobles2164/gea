@@ -9,5 +9,11 @@ return [
     'cciudadania' => 'Cédula de ciudadania',
     'tidentidad'  => 'Tarjeta de identidad',
     'pasaporte' => 'Pasaporte',
-    'cextranjeria' => 'Cédula de extranjeria'
+    'cextranjeria' => 'Cédula de extranjeria',
+    'permiso_crear' => 'Crear',
+    'permiso_actualizar' => 'Actualizar',
+    'permiso_consultar' => 'Consultar',
+    'permiso_indexar' => 'Indexar',
+    'permiso_todos' => 'Todos',
+    'permiso_ninguno' => 'Ninguno'
 ];

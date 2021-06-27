@@ -21,10 +21,21 @@ class EPermisosRutas extends AEnum{
     }
     public static function getIndex($index){
         $items = [];
+
         if(self::$items == null){
             self::setItems();
         }
         $items = self::$items;
         return $items[$index];
+    }
+    public static function getAllPermisos(){
+        $items_retorno = [];
+        if(self::$items == null){
+            self::setItems();
+        }
+        foreach(self::$items as $i){
+            array_push($items_retorno, $i);
+        }
+        return $items_retorno;
     }
 }

@@ -38,7 +38,7 @@ class FactoryRepo{
             $RepoInstance = $factory::GetInstance();
             return $RepoInstance;
         }catch(Exception $e){
-             return ;
+             return null;
         }
     }
     //obtiene la instancia de todos los repositorios

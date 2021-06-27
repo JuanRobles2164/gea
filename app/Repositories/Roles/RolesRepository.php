@@ -3,12 +3,11 @@
 namespace App\Repositories\Roles;
 
 use App\Models\Rol;
-use App\Models\Roles;
 use App\Repositories\BaseRepository;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 
-class CategoryRepository extends BaseRepository{
+class RolesRepository extends BaseRepository{
     private static $instance;
     private function __construct(){
 

@@ -51,7 +51,7 @@ class FactoryRepo{
             }
             return $arr;
         }catch(Exception $e){
-            return ;
+            return null;
         }
     }
 }

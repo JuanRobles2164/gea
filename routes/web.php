@@ -37,3 +37,6 @@ Route::post('/roles_usuario/crear', 'PermissionsController@crear')->name('roles_
 Route::get('/ciclos', 'CiclosController@getAllCiclos')->name('ciclos.index');
 Route::post('/updateCiclo', 'CiclosController@updateCiclo')->name('ciclos.update');
 Route::post('/createCiclo', 'CiclosController@createCiclo')->name('ciclos.create');
+
+Route::get('/proyectos', 'ProyectosController@index')->name('proyectos.indedx');
+

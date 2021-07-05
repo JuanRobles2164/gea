@@ -13,7 +13,7 @@ class FactoryRepo{
         'RoutesRepository' => 'App\Repositories\Routes\RoutesRepository',
         'PermissionsRepository' => 'App\Repositories\Permissions\PermissionsRepository',
         //'ObservacionesRepository' => 'App\Repositories\Observaciones\ObservacionesRepository',
-       // 'ProyectoRepository' => 'App\Repositories\Proyectos\ProyectoRepository',
+        'ProyectoRepository' => 'App\Repositories\Proyectos\ProyectoRepository',
         //'FasesRepository' => 'App\Repositories\Fases\FasesRepository',
         //'GrupoTrabajoRepository' => 'App\Repositories\GrupoTrabajo\GrupoTrabajoRepository',
         //'GrupoUsuarioRepository' => 'App\Repositories\GrupoUsuario\GrupoUsuarioRepository',

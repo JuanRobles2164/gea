@@ -28,11 +28,11 @@ class CiclosController extends Controller
         return $this->res;
     }
     public function findCiclo(Request $request){
-        $ciclo = $this->factoryRepo::GetRepoInstance('CiclosRespository')->find($request->id);
+        $ciclo = $this->factoryRepo::GetRepoInstance('CiclosRepository')->find($request->id);
         return response()->json(['data' => $ciclo]);
     }
     public function getAllCiclos(){
-        $ciclos = $this->factoryRepo::GetRepoInstance('CiclosRespository')->getAll();
+        $ciclos = $this->factoryRepo::GetRepoInstance('CiclosRepository')->getAll();
         return response()->json(['data' => $ciclos]);
     }
     public function updateCiclo(CiclosCreate $request){

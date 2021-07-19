@@ -20,26 +20,26 @@ class ProyectosController extends Controller
             'proyectos'
         ]));
     }
-    public function createCiclo(Request $request){
+    public function createProyecto(Request $request){
         $proyecto = new Proyecto();
         $proyecto->fill($request->all());
         $this->factoryRepo::GetRepoInstance('ProyectoRepository')->create($proyecto);
         return $this->res;
     }
-    public function findCiclo(Request $request){
-        $ciclo = $this->factoryRepo::GetRepoInstance('ProyectoRepository')->find($request->id);
-        return response()->json(['data' => $ciclo]);
+    public function findProyecto(Request $request){
+        $proyecto = $this->factoryRepo::GetRepoInstance('ProyectoRepository')->find($request->id);
+        return response()->json(['data' => $proyecto]);
     }
     public function getAll(){
-        $ciclos = $this->factoryRepo::GetRepoInstance('ProyectoRepository')->getAll();
-        return response()->json(['data' => $ciclos]);
+        $proyectos = $this->factoryRepo::GetRepoInstance('ProyectoRepository')->getAll();
+        return response()->json(['data' => $proyectos]);
     }
-    public function updateCiclo(Request $request){
-        $ciclo = new Proyecto();
-        $this->FactoryRepo::GetRepoInstance('ProyectoRepository')->update($ciclo, $request);
+    public function updateProyecto(Request $request){
+        $proyecto = new Proyecto();
+        $this->FactoryRepo::GetRepoInstance('ProyectoRepository')->update($proyecto, $request);
         return $this->res;
     }
-    public function deleteCiclo(Request $request){
+    public function deleteProyecto(Request $request){
         $this->FactoryRepo::GetRepoInstance('ProyectoRepository')->delete($request);
         return $this->res;
     }

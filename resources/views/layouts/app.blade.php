@@ -11,14 +11,21 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="{{ asset('assets/js/vendor-all.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/plugins/bootstrap.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/plugins/feather.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/pcoded.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/plugins/apexcharts.min.js') }}" defer></script>
+    <script src="{{ asset('assets/js/pages/dashboard-sale.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="icon" href="assets/images/favicon.svg" type="image/x-icon">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" id="main-style-link">
 </head>
 <body>
     <div id="app">

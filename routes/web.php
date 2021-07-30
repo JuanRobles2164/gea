@@ -38,5 +38,7 @@ Route::get('/ciclos', 'CiclosController@getAllCiclos')->name('ciclos.index');
 Route::post('/updateCiclo', 'CiclosController@updateCiclo')->name('ciclos.update');
 Route::post('/createCiclo', 'CiclosController@createCiclo')->name('ciclos.create');
 
-Route::get('/proyectos', 'ProyectosController@index')->name('proyectos.indedx');
+Route::get('/proyectos', 'ProyectosController@index')->name('proyectos.index');
+Route::get('/updateProyeto/{id}', 'ProyectosController@findProyecto')->name('proyecto.cargar');
+Route::post('/updateProyeto/{id}', 'ProyectosController@updateProyecto')->name('proyecto.update');
 
